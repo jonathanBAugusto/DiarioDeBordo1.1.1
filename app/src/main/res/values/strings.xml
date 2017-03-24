@@ -1,3 +1,17 @@
 <resources>
-    <string name="app_name">DiarioDeBordo</string>
+    <string name="app_name">Diario de Bordo</string>
+    <string name="tvLog">Usuario</string>
+    <string name="tvSenha">Senha</string>
+    <string name="tvNome">Nome</string>
+    <string name="tvUsuario">Usuario</string>
+    <string name="tvCadastro">NOVO CADASTRO</string>
+    <string name="btCancelar">Cancelar</string>
+    <string name="btEnviar">Enviar</string>
+    <string name="tvRsenha">Repita a Senha</string>
+    <string name="title_activity_main_menu">MainMenuActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
 </resources>
