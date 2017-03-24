@@ -1,17 +1,25 @@
 <resources>
-    <string name="app_name">Diario de Bordo</string>
-    <string name="tvLog">Usuario</string>
+    <string name="app_name">Diário de Bordo</string>
+    <string name="act_login">Login</string>
+    <string name="act_cad">Cadastro</string>
+    <string name="tvLog">Usuário</string>
     <string name="tvSenha">Senha</string>
     <string name="tvNome">Nome</string>
-    <string name="tvUsuario">Usuario</string>
+    <string name="tvUsuario">Usuário</string>
     <string name="tvCadastro">NOVO CADASTRO</string>
     <string name="btCancelar">Cancelar</string>
     <string name="btEnviar">Enviar</string>
     <string name="tvRsenha">Repita a Senha</string>
-    <string name="title_activity_main_menu">MainMenuActivity</string>
+    <string name="title_activity_main_menu">Menu Principal</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Sair</string>
+    <string name="tvEmailLg">E-mail não cadastrado</string>
+    <string name="tvNomeLg">Nome não cadastrado</string>
+    <string name="tvEmail">E-mail</string>
+    <string name="htSenha">********</string>
+    <string name="htUsuario">Usuário</string>
+    <string name="tvCadastrar"><u>Criar uma conta no D\'Bordo</u></string>
 </resources>

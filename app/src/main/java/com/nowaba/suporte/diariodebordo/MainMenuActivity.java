@@ -1,5 +1,6 @@
 package com.nowaba.suporte.diariodebordo;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -12,16 +13,28 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 public class MainMenuActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
+    private TextView tvNome;
+    private TextView tvEmail;
+    private String nome, email;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+
+        Bundle extra = getIntent().getExtras();
+
+        if(extra!=null){
+            nome = extra.getString("nome");
+            email = extra.getString("email");
+        }
+
         setSupportActionBar(toolbar);
+
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -40,6 +53,7 @@ public class MainMenuActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
     }
 
     @Override
@@ -50,12 +64,18 @@ public class MainMenuActivity extends AppCompatActivity
         } else {
             super.onBackPressed();
         }
+
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main_menu, menu);
+        //Menu Inflavel--------------------------------------------------------------------------------------------------------------------<--
+        tvNome = (TextView)findViewById(R.id.tvNomelg);
+        tvEmail = (TextView)findViewById(R.id.tvEmailLg);
+        tvNome.setText(nome);
+        tvEmail.setText(email);
         return true;
     }
 
@@ -68,6 +88,10 @@ public class MainMenuActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            //botão sair -------------------------------------------------------------------------------------------------------------------<--
+            Intent intent = new Intent(getApplicationContext(),Login.class);
+            startActivity(intent);
+            finish();
             return true;
         }
 
@@ -98,4 +122,5 @@ public class MainMenuActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
 }
